@@ -9,12 +9,22 @@ export const processImage = async (imageFile: File): Promise<string> => {
   // Simulate API call delay
   await delay(2000);
   
-  // Return mock OCR result
-  return `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.
+  // Return mock OCR result with better formatting for demonstration
+  return `# Document Analysis Results
 
-Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio.
+## Section 1: Introduction
+This document provides an analysis of the image content using Optical Character Recognition technology. The processed text maintains its original structure while improving readability.
 
-Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet.`;
+## Section 2: Key Findings
+- Text has been successfully extracted from the image
+- Formatting has been preserved where possible
+- Special characters and symbols have been recognized
+- Multi-paragraph structure has been maintained
+
+## Section 3: Recommendations
+Based on the extraction results, we recommend reviewing the text for any potential inaccuracies that might have occurred during the OCR process. While our technology is highly accurate, certain handwriting styles or image qualities may affect recognition precision.
+
+Thank you for using our OCR tool. For any questions or feedback, please contact our support team.`;
 };
 
 // Save to history - in a real app, this would save to a database or localStorage

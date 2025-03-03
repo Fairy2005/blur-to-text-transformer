@@ -7,6 +7,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import FeatureHighlights from "@/components/FeatureHighlights";
 import Footer from "@/components/Footer";
 import HistoryButton from "@/components/HistoryButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { processImage, saveToHistory } from "@/services/ocrService";
 
 const Index = () => {
@@ -73,15 +74,16 @@ const Index = () => {
   return (
     <>
       <HistoryButton />
+      <ThemeToggle />
       
-      <div className="min-h-screen">
-        <header className="bg-white py-12 border-b">
+      <div className="min-h-screen dark:bg-gray-900 transition-colors">
+        <header className="bg-white dark:bg-gray-900 py-12 border-b dark:border-gray-800">
           <div className="container px-4">
             <div className="max-w-5xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in dark:text-white">
                 Transform Blurry Text Into Crystal Clear Content
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-slide-in">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-in">
                 Our AI-powered OCR tool converts hard-to-read handwritten notes and blurry images into editable, clear text
               </p>
             </div>
@@ -89,12 +91,12 @@ const Index = () => {
         </header>
         
         <main>
-          <section className="py-16 bg-white">
+          <section className="py-16 bg-white dark:bg-gray-900">
             <div className="container px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="bg-white rounded-xl shadow-sm border p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                    <h2 className="text-2xl font-medium mb-6">Upload Your Image</h2>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700 p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                    <h2 className="text-2xl font-medium mb-6 dark:text-white">Upload Your Image</h2>
                     <ImageUploader 
                       onImageUpload={handleImageUpload} 
                       isProcessing={isProcessing} 
