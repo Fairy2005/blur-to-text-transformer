@@ -1,6 +1,6 @@
 
 import React, { useState, useCallback, useRef, useEffect } from "react";
-import { Copy, Check } from "lucide-react";
+import { Copy, Check, Download } from "lucide-react";
 
 interface ComparisonSliderProps {
   beforeImage: string;
@@ -72,7 +72,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
   }, [handleMouseMove, handleMouseUp, handleTouchMove]);
   
   return (
-    <div className="w-full p-6 bg-white rounded-xl shadow-sm border dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full h-full p-6 bg-white rounded-xl shadow-sm border dark:bg-gray-800 dark:border-gray-700">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-medium dark:text-white">Result</h3>
         <div className="flex gap-2">
@@ -96,7 +96,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
             onClick={onDownload}
             className="download-button inline-flex items-center gap-1 bg-blue-600 text-white px-3 py-2 rounded-md transition-all hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
           >
-            Download Text
+            <Download className="h-4 w-4" /> Download
           </button>
         </div>
       </div>
@@ -113,10 +113,10 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
           <img 
             src={beforeImage} 
             alt="Before" 
-            className="h-full object-cover"
-            style={{ width: `${100 / (position / 100)}%` }}
+            className="h-full w-full object-contain"
+            style={{ minWidth: `${100 / (position / 100)}%` }}
           />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <div className="absolute top-4 left-4">
             <span className="px-2 py-1 bg-black/70 text-white text-sm rounded">Before</span>
           </div>
         </div>
@@ -127,7 +127,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
           style={{ width: `${100 - position}%`, left: `${position}%` }}
         >
           <div className="h-full w-full p-4 overflow-y-auto">
-            <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center">
+            <div className="absolute top-4 right-4">
               <span className="px-2 py-1 bg-black/70 text-white text-sm rounded">After</span>
             </div>
             <pre className="whitespace-pre-wrap font-sans text-sm dark:text-gray-200">{afterText}</pre>
@@ -136,7 +136,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
         
         {/* Slider Handle */}
         <div 
-          className="comparison-slider-handle"
+          className="comparison-slider-handle absolute top-0 bottom-0"
           style={{ left: `${position}%` }}
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
@@ -145,6 +145,10 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
             <div className="w-1 h-8 bg-gray-300 dark:bg-gray-500 rounded-full"></div>
           </div>
         </div>
+      </div>
+      
+      <div className="text-gray-500 dark:text-gray-400 text-sm">
+        Drag the slider to compare the original image with the extracted text.
       </div>
     </div>
   );

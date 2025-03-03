@@ -103,15 +103,22 @@ const Index = () => {
                     />
                   </div>
                   
-                  {imageUrl && (
-                    <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                  <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                    {imageUrl ? (
                       <ComparisonSlider 
                         beforeImage={imageUrl} 
                         afterText={extractedText || "Processing your image..."}
                         onDownload={handleDownload}
                       />
-                    </div>
-                  )}
+                    ) : (
+                      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700 p-6 h-full flex flex-col items-center justify-center">
+                        <h2 className="text-2xl font-medium mb-4 dark:text-white">Result</h2>
+                        <p className="text-gray-500 dark:text-gray-400 text-center">
+                          Upload an image to see the extracted text here
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
