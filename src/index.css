@@ -1,87 +1,86 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --background: 195 65% 94%; /* Baby Blue #e7f2f8 */
+    --foreground: 200 30% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 200 30% 10%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
+    --popover-foreground: 200 30% 10%;
     
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 193 42% 63%; /* Aquamarine #74bdcb */
+    --primary-foreground: 200 30% 98%;
     
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 16 100% 76%; /* Salmon #ffa384 */
+    --secondary-foreground: 200 30% 10%;
     
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted: 51 64% 84%; /* Freesia #efe7bc */
+    --muted-foreground: 200 30% 30%;
     
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
+    --accent: 51 64% 84%; /* Freesia #efe7bc */
+    --accent-foreground: 200 30% 10%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
+    --border: 193 42% 80%;
+    --input: 193 42% 80%;
+    --ring: 193 42% 63%;
     
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-background: 195 65% 94%;
+    --sidebar-foreground: 200 30% 20%;
+    --sidebar-primary: 193 42% 63%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 16 100% 76%;
+    --sidebar-accent-foreground: 200 30% 10%;
+    --sidebar-border: 193 42% 80%;
+    --sidebar-ring: 193 42% 63%;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+    --background: 199 89% 19%; /* Navy Blue #05445e */
+    --foreground: 187 42% 85%;
 
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
+    --card: 199 89% 19%;
+    --card-foreground: 187 42% 85%;
     
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 199 89% 19%;
+    --popover-foreground: 187 42% 85%;
     
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
+    --primary: 194 76% 40%; /* Blue Grotto #189ab4 */
+    --primary-foreground: 187 42% 95%;
     
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 183 67% 68%; /* Blue Green #75e6da */
+    --secondary-foreground: 199 89% 19%;
     
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted: 188 45% 88%; /* Dark Baby Blue #d4f1f4 */
+    --muted-foreground: 188 45% 40%;
     
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 183 67% 68%; /* Blue Green #75e6da */
+    --accent-foreground: 199 89% 19%;
     
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 20% 98%;
     
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    --border: 194 76% 30%;
+    --input: 194 76% 30%;
+    --ring: 188 45% 88%;
 
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 199 89% 19%;
+    --sidebar-foreground: 188 45% 88%;
+    --sidebar-primary: 194 76% 40%;
+    --sidebar-primary-foreground: 187 42% 95%;
+    --sidebar-accent: 183 67% 68%;
+    --sidebar-accent-foreground: 199 89% 19%;
+    --sidebar-border: 194 76% 30%;
+    --sidebar-ring: 188 45% 88%;
   }
 }
 

@@ -76,14 +76,14 @@ const Index = () => {
       <HistoryButton />
       <ThemeToggle />
       
-      <div className="min-h-screen dark:bg-gray-900 transition-colors">
-        <header className="bg-white dark:bg-gray-900 py-12 border-b dark:border-gray-800">
+      <div className="min-h-screen bg-baby-blue dark:bg-navy-blue transition-colors">
+        <header className="bg-white dark:bg-navy-blue py-12 border-b border-aquamarine/30 dark:border-blue-grotto/30">
           <div className="container px-4">
             <div className="max-w-5xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in dark:text-white">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in text-navy-blue dark:text-dark-baby-blue">
                 Transform Blurry Text Into Crystal Clear Content
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-in">
+              <p className="text-xl text-aquamarine dark:text-blue-green mb-8 max-w-3xl mx-auto animate-slide-in">
                 Our AI-powered OCR tool converts hard-to-read handwritten notes and blurry images into editable, clear text
               </p>
             </div>
@@ -91,12 +91,12 @@ const Index = () => {
         </header>
         
         <main>
-          <section className="py-16 bg-white dark:bg-gray-900">
+          <section className="py-16 bg-baby-blue dark:bg-navy-blue">
             <div className="container px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700 p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                    <h2 className="text-2xl font-medium mb-6 dark:text-white">Upload Your Image</h2>
+                  <div className="bg-white dark:bg-blue-grotto/20 rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                    <h2 className="text-2xl font-medium mb-6 text-navy-blue dark:text-dark-baby-blue">Upload Your Image</h2>
                     <ImageUploader 
                       onImageUpload={handleImageUpload} 
                       isProcessing={isProcessing} 
@@ -111,9 +111,9 @@ const Index = () => {
                         onDownload={handleDownload}
                       />
                     ) : (
-                      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border dark:border-gray-700 p-6 h-full flex flex-col items-center justify-center">
-                        <h2 className="text-2xl font-medium mb-4 dark:text-white">Result</h2>
-                        <p className="text-gray-500 dark:text-gray-400 text-center">
+                      <div className="bg-white dark:bg-blue-grotto/20 rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 h-full flex flex-col items-center justify-center">
+                        <h2 className="text-2xl font-medium mb-4 text-navy-blue dark:text-dark-baby-blue">Result</h2>
+                        <p className="text-aquamarine dark:text-blue-green text-center">
                           Upload an image to see the extracted text here
                         </p>
                       </div>

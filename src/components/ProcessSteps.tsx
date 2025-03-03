@@ -27,11 +27,11 @@ const ProcessSteps: React.FC = () => {
   ];
   
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16 bg-freesia/30 dark:bg-navy-blue/80">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-medium mb-4">How It Works</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-medium mb-4 text-navy-blue dark:text-dark-baby-blue">How It Works</h2>
+          <p className="text-aquamarine dark:text-blue-green max-w-2xl mx-auto">
             Our advanced OCR technology makes it easy to extract text from any image in just a few simple steps
           </p>
         </div>
@@ -40,11 +40,11 @@ const ProcessSteps: React.FC = () => {
           {steps.map((step, index) => (
             <div className="process-step" key={index}>
               {index < steps.length - 1 && (
-                <div className="process-step-line hidden md:block"></div>
+                <div className="process-step-line hidden md:block bg-aquamarine/50 dark:bg-blue-grotto/50"></div>
               )}
-              <div className="process-step-icon">{step.icon}</div>
-              <h3 className="text-xl font-medium mb-2">{step.title}</h3>
-              <p className="text-sm text-gray-600 text-center">{step.description}</p>
+              <div className="process-step-icon bg-salmon/20 text-salmon dark:bg-blue-green/20 dark:text-blue-green">{step.icon}</div>
+              <h3 className="text-xl font-medium mb-2 text-navy-blue dark:text-dark-baby-blue">{step.title}</h3>
+              <p className="text-sm text-aquamarine dark:text-blue-green text-center">{step.description}</p>
             </div>
           ))}
         </div>

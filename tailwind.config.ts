@@ -20,6 +20,17 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Custom color palette
+				"baby-blue": "#e7f2f8",
+				"aquamarine": "#74bdcb",
+				"salmon": "#ffa384",
+				"freesia": "#efe7bc",
+				"navy-blue": "#05445e",
+				"blue-grotto": "#189ab4",
+				"blue-green": "#75e6da",
+				"dark-baby-blue": "#d4f1f4",
+				
+				// Original system colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

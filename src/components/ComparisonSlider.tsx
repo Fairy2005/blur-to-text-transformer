@@ -72,13 +72,13 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
   }, [handleMouseMove, handleMouseUp, handleTouchMove]);
   
   return (
-    <div className="w-full h-full p-6 bg-white rounded-xl shadow-sm border dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full h-full p-6 bg-white dark:bg-blue-grotto/20 rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-medium dark:text-white">Result</h3>
+        <h3 className="text-lg font-medium text-navy-blue dark:text-dark-baby-blue">Result</h3>
         <div className="flex gap-2">
           <button 
             onClick={handleCopyText}
-            className="copy-button inline-flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-2 rounded-md transition-all dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+            className="copy-button inline-flex items-center gap-1 bg-baby-blue hover:bg-aquamarine/30 text-navy-blue px-3 py-2 rounded-md transition-all dark:bg-navy-blue/50 dark:text-dark-baby-blue dark:hover:bg-navy-blue/70"
             aria-label="Copy text"
             title="Copy to clipboard"
           >
@@ -94,7 +94,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
           </button>
           <button 
             onClick={onDownload}
-            className="download-button inline-flex items-center gap-1 bg-blue-600 text-white px-3 py-2 rounded-md transition-all hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
+            className="download-button inline-flex items-center gap-1 bg-aquamarine text-white px-3 py-2 rounded-md transition-all hover:bg-aquamarine/80 dark:bg-blue-grotto dark:hover:bg-blue-grotto/80"
           >
             <Download className="h-4 w-4" /> Download
           </button>
@@ -103,7 +103,7 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
       
       <div 
         ref={sliderRef}
-        className="comparison-slider h-80 mb-4 relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-900"
+        className="comparison-slider h-80 mb-4 relative overflow-hidden rounded-lg bg-baby-blue dark:bg-navy-blue/50"
       >
         {/* Before - Image */}
         <div 
@@ -117,20 +117,20 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
             style={{ minWidth: `${100 / (position / 100)}%` }}
           />
           <div className="absolute top-4 left-4">
-            <span className="px-2 py-1 bg-black/70 text-white text-sm rounded">Before</span>
+            <span className="px-2 py-1 bg-salmon text-white text-sm rounded">Before</span>
           </div>
         </div>
         
         {/* After - Text */}
         <div 
-          className="absolute top-0 right-0 h-full overflow-hidden bg-white dark:bg-gray-800"
+          className="absolute top-0 right-0 h-full overflow-hidden bg-white dark:bg-blue-grotto/20"
           style={{ width: `${100 - position}%`, left: `${position}%` }}
         >
           <div className="h-full w-full p-4 overflow-y-auto">
             <div className="absolute top-4 right-4">
-              <span className="px-2 py-1 bg-black/70 text-white text-sm rounded">After</span>
+              <span className="px-2 py-1 bg-aquamarine text-white text-sm rounded dark:bg-blue-grotto">After</span>
             </div>
-            <pre className="whitespace-pre-wrap font-sans text-sm dark:text-gray-200">{afterText}</pre>
+            <pre className="whitespace-pre-wrap font-sans text-sm text-navy-blue dark:text-dark-baby-blue">{afterText}</pre>
           </div>
         </div>
         
@@ -141,13 +141,13 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
           onMouseDown={handleMouseDown}
           onTouchStart={handleMouseDown}
         >
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white dark:bg-gray-700 rounded-full shadow-lg flex items-center justify-center cursor-ew-resize">
-            <div className="w-1 h-8 bg-gray-300 dark:bg-gray-500 rounded-full"></div>
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white dark:bg-blue-green rounded-full shadow-lg flex items-center justify-center cursor-ew-resize">
+            <div className="w-1 h-8 bg-aquamarine/50 dark:bg-navy-blue/50 rounded-full"></div>
           </div>
         </div>
       </div>
       
-      <div className="text-gray-500 dark:text-gray-400 text-sm">
+      <div className="text-aquamarine dark:text-blue-green text-sm">
         Drag the slider to compare the original image with the extracted text.
       </div>
     </div>
