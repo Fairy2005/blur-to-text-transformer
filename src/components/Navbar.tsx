@@ -65,28 +65,30 @@ const Navbar: React.FC = () => {
             <span className="text-navy-blue dark:text-dark-baby-blue font-bold text-xl">TextClarify</span>
           </div>
           
-          {/* Auth Buttons */}
-          <div className="flex space-x-4">
-            <button 
-              onClick={() => setLoginOpen(true)} 
-              className="flex items-center space-x-1 px-4 py-2 rounded-md bg-transparent border border-aquamarine dark:border-blue-grotto text-aquamarine dark:text-blue-grotto hover:bg-aquamarine/10 dark:hover:bg-blue-grotto/10 transition-colors"
-            >
-              <LogIn className="w-4 h-4" />
-              <span>Login</span>
-            </button>
-            <button 
-              onClick={() => setSignUpOpen(true)}
-              className="flex items-center space-x-1 px-4 py-2 rounded-md bg-salmon dark:bg-blue-green text-white hover:bg-salmon/90 dark:hover:bg-blue-green/90 transition-colors"
-            >
-              <UserPlus className="w-4 h-4" />
-              <span>Sign Up</span>
-            </button>
+          <div className="flex items-center">
+            {/* Tubelight NavBar - Centered in the middle */}
+            <div className="mr-6">
+              <NavBar items={navItems} className="static transform-none mb-0 pt-0" />
+            </div>
+            
+            {/* Auth Buttons - Right side */}
+            <div className="flex space-x-4">
+              <button 
+                onClick={() => setLoginOpen(true)} 
+                className="flex items-center space-x-1 px-4 py-2 rounded-md bg-transparent border border-aquamarine dark:border-blue-grotto text-aquamarine dark:text-blue-grotto hover:bg-aquamarine/10 dark:hover:bg-blue-grotto/10 transition-colors"
+              >
+                <LogIn className="w-4 h-4" />
+                <span>Login</span>
+              </button>
+              <button 
+                onClick={() => setSignUpOpen(true)}
+                className="flex items-center space-x-1 px-4 py-2 rounded-md bg-salmon dark:bg-blue-green text-white hover:bg-salmon/90 dark:hover:bg-blue-green/90 transition-colors"
+              >
+                <UserPlus className="w-4 h-4" />
+                <span>Sign Up</span>
+              </button>
+            </div>
           </div>
-        </div>
-
-        {/* Tubelight NavBar */}
-        <div className="mt-4">
-          <NavBar items={navItems} className="static transform-none mb-0 pt-0" />
         </div>
 
         {/* Login Dialog */}
