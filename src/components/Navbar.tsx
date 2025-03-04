@@ -1,11 +1,8 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { LogIn, UserPlus } from "lucide-react";
-
 const Navbar: React.FC = () => {
-  return (
-    <nav className="bg-white dark:bg-navy-blue border-b border-aquamarine/30 dark:border-blue-grotto/30 py-4 px-6 sticky top-0 z-40">
+  return <nav className="bg-white dark:bg-navy-blue border-b border-aquamarine/30 dark:border-blue-grotto/30 py-4 px-6 sticky top-0 z-40">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo and Website Name */}
         <div className="flex items-center space-x-3">
@@ -20,12 +17,8 @@ const Navbar: React.FC = () => {
           <Link to="#features" className="text-aquamarine dark:text-blue-green hover:text-navy-blue dark:hover:text-dark-baby-blue transition-colors">
             Features
           </Link>
-          <Link to="#docs" className="text-aquamarine dark:text-blue-green hover:text-navy-blue dark:hover:text-dark-baby-blue transition-colors">
-            Documentation
-          </Link>
-          <Link to="#components" className="text-aquamarine dark:text-blue-green hover:text-navy-blue dark:hover:text-dark-baby-blue transition-colors">
-            Components
-          </Link>
+          <Link to="#docs" className="text-aquamarine dark:text-blue-green hover:text-navy-blue dark:hover:text-dark-baby-blue transition-colors">Documents</Link>
+          
         </div>
         
         {/* Auth Buttons */}
@@ -40,8 +33,6 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
