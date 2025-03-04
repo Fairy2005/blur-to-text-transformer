@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Home, FileText, LogIn, UserPlus } from "lucide-react";
 import { 
@@ -65,14 +64,12 @@ const Navbar: React.FC = () => {
             <span className="text-navy-blue dark:text-dark-baby-blue font-bold text-xl">TextClarify</span>
           </div>
           
-          <div className="flex items-center">
-            {/* Tubelight NavBar - Centered in the middle */}
-            <div className="mr-6">
-              <NavBar items={navItems} className="static transform-none mb-0 pt-0" />
-            </div>
+          <div className="flex items-center space-x-6">
+            {/* Navigation Menu - In the middle */}
+            <NavBar items={navItems} className="static transform-none mb-0 pt-0" />
             
             {/* Auth Buttons - Right side */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 ml-3">
               <button 
                 onClick={() => setLoginOpen(true)} 
                 className="flex items-center space-x-1 px-4 py-2 rounded-md bg-transparent border border-aquamarine dark:border-blue-grotto text-aquamarine dark:text-blue-grotto hover:bg-aquamarine/10 dark:hover:bg-blue-grotto/10 transition-colors"
