@@ -8,7 +8,6 @@ import FeatureHighlights from "@/components/FeatureHighlights";
 import Footer from "@/components/Footer";
 import HistoryButton from "@/components/HistoryButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import Navbar from "@/components/Navbar";
 import { processImage, saveToHistory } from "@/services/ocrService";
 
 const Index = () => {
@@ -78,8 +77,6 @@ const Index = () => {
       <ThemeToggle />
       
       <div className="min-h-screen bg-baby-blue dark:bg-navy-blue transition-colors">
-        <Navbar />
-        
         <header className="bg-white dark:bg-navy-blue py-12 border-b border-aquamarine/30 dark:border-blue-grotto/30">
           <div className="container px-4">
             <div className="max-w-5xl mx-auto text-center">
