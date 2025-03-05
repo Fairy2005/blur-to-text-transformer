@@ -10,6 +10,7 @@ import HistoryButton from "@/components/HistoryButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import TopNavbar from "@/components/TopNavbar";
 import BottomNavbar from "@/components/BottomNavbar";
+import { WavyBackground } from "@/components/WavyBackground";
 import { processImage, saveToHistory } from "@/services/ocrService";
 
 const Index = () => {
@@ -79,8 +80,8 @@ const Index = () => {
       <HistoryButton />
       <ThemeToggle />
       
-      <div className="min-h-screen bg-baby-blue dark:bg-navy-blue transition-colors pb-24">
-        <header className="bg-white dark:bg-navy-blue py-12 border-b border-aquamarine/30 dark:border-blue-grotto/30">
+      <WavyBackground className="min-h-screen">
+        <header className="bg-white/70 dark:bg-navy-blue/70 backdrop-blur-md py-12 border-b border-aquamarine/30 dark:border-blue-grotto/30">
           <div className="container px-4">
             <div className="max-w-5xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in text-navy-blue dark:text-dark-baby-blue">
@@ -94,11 +95,11 @@ const Index = () => {
         </header>
         
         <main>
-          <section className="py-16 bg-baby-blue dark:bg-navy-blue">
+          <section className="py-16">
             <div className="container px-4">
               <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="bg-white dark:bg-blue-grotto/20 rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                  <div className="bg-white/80 dark:bg-blue-grotto/30 backdrop-blur-md rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
                     <h2 className="text-2xl font-medium mb-6 text-navy-blue dark:text-dark-baby-blue">Upload Your Image</h2>
                     <ImageUploader 
                       onImageUpload={handleImageUpload} 
@@ -114,7 +115,7 @@ const Index = () => {
                         onDownload={handleDownload}
                       />
                     ) : (
-                      <div className="bg-white dark:bg-blue-grotto/20 rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 h-full flex flex-col items-center justify-center">
+                      <div className="bg-white/80 dark:bg-blue-grotto/30 backdrop-blur-md rounded-xl shadow-sm border border-aquamarine/30 dark:border-blue-green/30 p-6 h-full flex flex-col items-center justify-center">
                         <h2 className="text-2xl font-medium mb-4 text-navy-blue dark:text-dark-baby-blue">Result</h2>
                         <p className="text-aquamarine dark:text-blue-green text-center">
                           Upload an image to see the extracted text here
@@ -133,7 +134,7 @@ const Index = () => {
         </main>
         
         <Footer />
-      </div>
+      </WavyBackground>
       
       <BottomNavbar />
     </>
