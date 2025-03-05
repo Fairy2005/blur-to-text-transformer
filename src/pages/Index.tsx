@@ -3,11 +3,13 @@ import React, { useState, useCallback } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import ImageUploader from "@/components/ImageUploader";
 import ComparisonSlider from "@/components/ComparisonSlider";
-import ProcessSteps from "@/components/ProcessSteps";
+import FeatureSection from "@/components/FeatureSection";
 import FeatureHighlights from "@/components/FeatureHighlights";
 import Footer from "@/components/Footer";
 import HistoryButton from "@/components/HistoryButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import TopNavbar from "@/components/TopNavbar";
+import BottomNavbar from "@/components/BottomNavbar";
 import { processImage, saveToHistory } from "@/services/ocrService";
 
 const Index = () => {
@@ -73,10 +75,11 @@ const Index = () => {
   
   return (
     <>
+      <TopNavbar />
       <HistoryButton />
       <ThemeToggle />
       
-      <div className="min-h-screen bg-baby-blue dark:bg-navy-blue transition-colors">
+      <div className="min-h-screen bg-baby-blue dark:bg-navy-blue transition-colors pb-24">
         <header className="bg-white dark:bg-navy-blue py-12 border-b border-aquamarine/30 dark:border-blue-grotto/30">
           <div className="container px-4">
             <div className="max-w-5xl mx-auto text-center">
@@ -124,13 +127,15 @@ const Index = () => {
             </div>
           </section>
           
-          <ProcessSteps />
+          <FeatureSection />
           
           <FeatureHighlights />
         </main>
         
         <Footer />
       </div>
+      
+      <BottomNavbar />
     </>
   );
 };
